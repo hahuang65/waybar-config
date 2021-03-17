@@ -1,0 +1,99 @@
+/* Dracula Colors */
+@define-color background #282a36;
+@define-color highlight  #44475a;
+@define-color foreground #f8f8f2;
+@define-color comment    #6272a4;
+@define-color cyan       #8be9fd;
+@define-color green      #50fa7b;
+@define-color orange     #ffb86c;
+@define-color pink       #ff79c6;
+@define-color purple     #bd93f9;
+@define-color red        #ff5555;
+@define-color yellow     #f1fa8c;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Homespun TT BRK";
+  font-size: 24px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @background;
+  border-bottom: 3px solid @highlight;
+  color: @yellow;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
+  margin: 0 10px;
+}
+
+#battery {
+  color: @comment;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  background: #f53c3c;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#clock {
+  color: @pink;
+}
+
+#cpu {
+  color: @purple;
+}
+
+#memory {
+  color: @cyan;
+}
+
+#network {
+  color: @purple;
+}
+
+#pulseaudio {
+  color: @cyan;
+}
+
+#temperature {
+  color: @orange;
+}
+
+#temperature.critical {
+  color: @red;
+}
+
+#workspaces button {
+  background: transparent;
+  color: @comment;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+  background: @highlight;
+  border-bottom: 2px solid white;
+  color: @green;
+}
