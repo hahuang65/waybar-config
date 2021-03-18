@@ -80,7 +80,8 @@
         "return-type": "json",
         "format-icons": {
             "spotify": "",
-            "default": ""
+            "ncspot": "",
+            "default": "ﱘ"
         },
         "escape": true,
         "on-click": "playerctl play-pause",
