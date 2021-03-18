@@ -1,6 +1,6 @@
 {
     "height": 42, // Waybar height (to be removed for auto height)
-    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["cpu", "memory", "temperature"],
     "modules-right": ["custom/media", "pulseaudio", "backlight", "network", "battery", "clock#calendar", "clock"],
     "sway/workspaces": {
@@ -8,10 +8,10 @@
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "Web": "",
-            "Chat": "",
-            "Music": "",
-            "Dev": "",
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
         }
     },
     "backlight": {
@@ -84,6 +84,7 @@
         },
         "escape": true,
         "on-click": "playerctl play-pause",
+        // Requires `pip install PyGObject` and `pacman -S gobject-introspection'
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
     }
 }
