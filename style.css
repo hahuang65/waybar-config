@@ -14,7 +14,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: "Homespun TT BRK";
+  font-family: "Homespun TT BRK", "FontAwesome";
   font-size: 24px;
   min-height: 0;
 }
@@ -27,8 +27,8 @@ window#waybar {
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
-    color: black;
+    background-color: @foreground;
+    color: @foreground;
   }
 }
 
@@ -36,17 +36,30 @@ window#waybar {
   margin: 0 10px;
 }
 
-#battery {
-  color: @comment;
-}
-
 #battery.charging {
   color: @green;
 }
 
-#battery.warning:not(.charging) {
-  background: #f53c3c;
-  color: white;
+#battery.full {
+  color: @green;
+}
+
+#battery.good {
+  color: @yellow;
+}
+
+#battery.warning {
+  color: @orange;
+}
+
+#battery.critical {
+  color: @pink;
+}
+
+#battery.warning:not(.charging), #battery.critical:not(.charging) {
+  padding: 0 10px;
+  border-bottom: 3px solid @highlight; /* Same as window#waybar for consistency */
+  background: @red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
