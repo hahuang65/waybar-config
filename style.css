@@ -36,11 +36,11 @@ window#waybar {
   margin: 0 10px;
 }
 
-#battery.charging {
+#battery {
   color: @green;
 }
 
-#battery.full {
+#battery.charging {
   color: @green;
 }
 
