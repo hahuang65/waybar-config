@@ -29,7 +29,7 @@
         "format-icons": ["", "", "", "", ""]
     },
     "clock": {
-        "format": " {:%H:%M:%S}",
+        "format": " {:%H:%M}",
     },
     "clock#calendar": {
         "format": " {:%Y/%m/%d}",
