@@ -76,7 +76,7 @@
         "format-icons": {
             "spotify": "",
             "ncspot": "",
-            "default": "ﱘ"
+            "default": ""
         },
         "escape": true,
         "on-click": "playerctl play-pause",
