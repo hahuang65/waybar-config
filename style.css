@@ -19,10 +19,10 @@
 @define-color foreground #a9b1d6;
 @define-color comment    #565f89;
 @define-color cyan       #7dcfff;
-@define-color green      #9ece6a;
+@define-color green      #73daca;
 @define-color orange     #ff9e64;
 @define-color pink       #bb9af7;
-@define-color purple     #7aa2f7;
+@define-color blue       #7aa2f7;
 @define-color red        #f7768e;
 @define-color yellow     #e0af68;
 
@@ -99,7 +99,7 @@ window#waybar {
 }
 
 #network {
-  color: @purple;
+  color: @blue;
 }
 
 #pulseaudio {
