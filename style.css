@@ -29,17 +29,17 @@
 -------------------------------*/
 
 /* Catppuccin */
-@define-color background #1E1E28;
+@define-color background #1E1D2F;
 @define-color highlight  #575268;
-@define-color foreground #DFDEF1;
+@define-color foreground #D9E0EE;
 @define-color comment    #988BA2;
-@define-color cyan       #92D2E8;
-@define-color green      #B1E1A6;
-@define-color orange     #F7BE95;
-@define-color pink       #E5B4E2;
-@define-color blue       #A3B9EF;
-@define-color red        #E38C8F;
-@define-color yellow     #ECDDAA;
+@define-color cyan       #89DCEB;
+@define-color green      #ABE9B3;
+@define-color orange     #F8BD96;
+@define-color pink       #F5C2E7;
+@define-color blue       #96CDFB;
+@define-color red        #F28FAD;
+@define-color yellow     #FAE3B0;
 
 * {
   border: none;
