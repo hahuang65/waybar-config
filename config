@@ -1,10 +1,11 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": ["sway/workspaces", "sway/mode", "wlr/workspaces"],
   "modules-center": ["cpu", "memory", "temperature"],
   "modules-right": ["custom/media", "pulseaudio", "backlight", "network", "battery", "idle_inhibitor", "clock#calendar", "clock"],
-  "sway/workspaces": {
-      "disable-scroll": true,
+  "wlr/workspaces": {
+      "sort-by-number": true,
       "all-outputs": true,
+      "on-click": "activate",
       "format": "{icon}",
       "format-icons": {
           "1": "",

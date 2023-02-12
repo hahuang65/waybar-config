@@ -139,7 +139,7 @@ window#waybar {
   border-bottom: 3px solid transparent;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
   background: @highlight;
   border-bottom: 2px solid white;
   color: @orange;
