@@ -1,11 +1,14 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode", "wlr/workspaces"],
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  // "modules-left": ["wlr/workspaces"], // For hyprland
   "modules-center": ["cpu", "memory", "temperature"],
   "modules-right": ["custom/media", "pulseaudio", "backlight", "network", "battery", "idle_inhibitor", "clock#calendar", "clock"],
-  "wlr/workspaces": {
-      "sort-by-number": true,
+  // "wlr/workspaces": { // For hyprland
+  "sway/workspaces": { // For sway
+      // "sort-by-number": true, // For hyprland
+      // "on-click": "activate", // For hyprland
+      "disable-scroll": true, // For sway
       "all-outputs": true,
-      "on-click": "activate",
       "format": "{icon}",
       "format-icons": {
           "1": "",

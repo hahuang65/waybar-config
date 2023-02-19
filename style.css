@@ -62,7 +62,14 @@ window#waybar {
   }
 }
 
-#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio {
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio {
   margin: 0 10px;
 }
 
@@ -86,7 +93,8 @@ window#waybar {
   color: @pink;
 }
 
-#battery.warning:not(.charging), #battery.critical:not(.charging) {
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) {
   padding: 0 10px;
   border-bottom: 3px solid @highlight; /* Same as window#waybar for consistency */
   background: @red;
@@ -126,7 +134,7 @@ window#waybar {
 }
 
 #idle_inhibitor {
-  color: @red
+  color: @red;
 }
 
 #temperature.critical {
@@ -139,7 +147,8 @@ window#waybar {
   border-bottom: 3px solid transparent;
 }
 
-#workspaces button.active {
+/* #workspaces button.active { For hyprland */
+#workspaces button.focused {
   background: @highlight;
   border-bottom: 2px solid white;
   color: @orange;
