@@ -11,15 +11,15 @@
       "all-outputs": true,
       "format": "{icon}",
       "format-icons": {
-          "1": "",
+          "1": "󰈹",
           "2": "",
-          "3": "",
-          "4": "",
+          "3": "",
+          "4": "",
       }
   },
   "backlight": {
       "format": "{icon} {percent}%",
-      "format-icons": ["", "", "", ""]
+      "format-icons": ["󰃝", "󰃞", "󰃟", "󰃠"]
   },
   "battery": {
       "states": {
@@ -32,7 +32,7 @@
       "format-icons": ["", "", "", "", ""]
   },
   "clock": {
-      "format": " {:%H:%M}",
+      "format": "󰥔 {:%H:%M}",
   },
   "clock#calendar": {
       "format": " {:%Y/%m/%d}",
@@ -43,7 +43,7 @@
       "tooltip": false
   },
   "memory": {
-      "format": " {}%"
+      "format": "󰍛 {}%"
   },
   "network": {
       "format-wifi": " {essid}",
@@ -61,8 +61,8 @@
       "scroll-step": 1, // %, can be a float
       "format": "{icon} {volume}% {format_source}",
       "format-bluetooth": " {icon} {volume}% {format_source}",
-      "format-bluetooth-muted": " ﱝ {format_source}",
-      "format-muted": "ﱝ {format_source}",
+      "format-bluetooth-muted": " 󰝟 {format_source}",
+      "format-muted": "󰝟 {format_source}",
       "format-source": " {volume}%",
       "format-source-muted": "",
       "format-icons": {
@@ -72,8 +72,8 @@
   "idle_inhibitor": {
       "format": "{icon}",
       "format-icons": {
-          "activated": "  ",
-          "deactivated": " ﯈ "
+          "activated": " 󰅶 ",
+          "deactivated": " 󰛊 "
       }
   },
   "custom/media": {
