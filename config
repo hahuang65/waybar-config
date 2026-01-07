@@ -1,20 +1,21 @@
 {
   "modules-left": ["sway/workspaces", "sway/mode"],
   // "modules-left": ["wlr/workspaces"], // For hyprland
-  "modules-center": ["cpu", "memory", "temperature"],
-  "modules-right": ["custom/media", "pulseaudio", "backlight", "network", "battery", "idle_inhibitor", "clock#calendar", "clock"],
+  "modules-center": ["clock", "clock#calendar"],
+  "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "backlight", "network", "battery"],
   // "wlr/workspaces": { // For hyprland
   "sway/workspaces": { // For sway
       // "sort-by-number": true, // For hyprland
       // "on-click": "activate", // For hyprland
       "disable-scroll": true, // For sway
       "all-outputs": true,
-      "format": "{icon}",
+      "format": "{icon} {name}",
       "format-icons": {
-          "1": "󰈹",
-          "2": "",
-          "3": "",
-          "4": "",
+          "1:web": "󰈹",
+          "2:chat": "",
+          "3:media": "",
+          "4:game": "",
+          "5:code": "",
       }
   },
   "backlight": {
@@ -32,10 +33,10 @@
       "format-icons": ["", "", "", "", ""]
   },
   "clock": {
-      "format": "󰥔 {:%H:%M}",
+      "format": "{:%H:%M}",
   },
   "clock#calendar": {
-      "format": " {:%Y/%m/%d}",
+      "format": "{:%Y/%m/%d}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
   "cpu": {
