@@ -70,8 +70,11 @@ window#waybar {
 #temperature,
 #backlight,
 #network,
-#pulseaudio {
-  margin: 0 10px;
+#pulseaudio,
+#idle_inhibitor,
+#custom-media,
+#custom-weather {
+  padding: 0 10px;
 }
 
 #battery {
@@ -131,6 +134,10 @@ window#waybar {
 }
 
 #temperature {
+  color: @orange;
+}
+
+#custom-weather {
   color: @orange;
 }
 
