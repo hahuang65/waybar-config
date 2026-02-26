@@ -71,7 +71,8 @@ window#waybar {
 #temperature,
 #backlight,
 #custom-network,
-#pulseaudio,
+#custom-volume,
+#custom-microphone,
 #idle_inhibitor,
 #custom-media,
 #custom-weather {
@@ -142,8 +143,17 @@ window#waybar {
   color: @red;
 }
 
-#pulseaudio {
+#custom-volume,
+#custom-microphone {
   color: @cyan;
+}
+
+#custom-volume.muted {
+  color: @red;
+}
+
+#custom-microphone.muted {
+  color: @red;
 }
 
 #temperature {

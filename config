@@ -2,7 +2,7 @@
   "modules-left": ["sway/workspaces", "sway/mode"],
   // "modules-left": ["wlr/workspaces"], // For hyprland
   "modules-center": ["custom/clock", "clock#calendar", "custom/weather"],
-  "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "backlight", "custom/network", "battery"],
+  "modules-right": ["custom/media", "idle_inhibitor", "custom/volume", "custom/microphone", "backlight", "custom/network", "battery"],
   // "wlr/workspaces": { // For hyprland
   "sway/workspaces": { // For sway
       // "sort-by-number": true, // For hyprland
@@ -63,17 +63,27 @@
       "format": "{icon} {temperatureC}°C",
       "format-icons": [""]
   },
-  "pulseaudio": {
-      "scroll-step": 1, // %, can be a float
-      "format": "{icon} {volume}% {format_source}",
-      "format-bluetooth": " {icon} {volume}% {format_source}",
-      "format-bluetooth-muted": " 󰝟 {format_source}",
-      "format-muted": "󰝟 {format_source}",
-      "format-source": " {volume}%",
-      "format-source-muted": "",
-      "format-icons": {
-          "default": ["", "", ""]
-      }
+  "custom/volume": {
+      "format": "{}",
+      "return-type": "json",
+      "interval": 2,
+      "exec": "$HOME/.config/waybar/scripts/volume.sh",
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+      "on-click-right": "$HOME/.config/waybar/scripts/audio-cycle.sh sink",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-",
+      "tooltip": true
+  },
+  "custom/microphone": {
+      "format": "{}",
+      "return-type": "json",
+      "interval": 2,
+      "exec": "$HOME/.config/waybar/scripts/microphone.sh",
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+      "on-click-right": "$HOME/.config/waybar/scripts/audio-cycle.sh source",
+      "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%+",
+      "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-",
+      "tooltip": true
   },
   "idle_inhibitor": {
       "format": "{icon}",
