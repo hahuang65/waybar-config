@@ -69,7 +69,7 @@ window#waybar {
 #memory,
 #temperature,
 #backlight,
-#network,
+#custom-network,
 #pulseaudio,
 #idle_inhibitor,
 #custom-media,
@@ -125,8 +125,16 @@ window#waybar {
   color: @cyan;
 }
 
-#network {
+#custom-network {
   color: @blue;
+}
+
+#custom-network.wifi-vpn {
+  color: @green;
+}
+
+#custom-network.disconnected {
+  color: @red;
 }
 
 #pulseaudio {

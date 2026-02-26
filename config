@@ -2,7 +2,7 @@
   "modules-left": ["sway/workspaces", "sway/mode"],
   // "modules-left": ["wlr/workspaces"], // For hyprland
   "modules-center": ["clock", "clock#calendar", "custom/weather"],
-  "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "backlight", "network", "battery"],
+  "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "backlight", "custom/network", "battery"],
   // "wlr/workspaces": { // For hyprland
   "sway/workspaces": { // For sway
       // "sort-by-number": true, // For hyprland
@@ -46,15 +46,12 @@
   "memory": {
       "format": "󰍛 {}%"
   },
-  "network": {
-      "tooltip": true,
-      "format-wifi": " {essid}",
-      "format-ethernet": " VPN",
-      "tooltip-format": "{ifname}: {ipaddr}",
-      "tooltip-format-wifi": " {essid} ({signalStrength}%)\n{ifname}: {ipaddr}",
-      "tooltip-format-ethernet": "{ifname}: {ipaddr}",
-      "tooltip-format-disconnected": "Disconnected",
-      "format-disconnected": "󰖪 NONE",
+  "custom/network": {
+      "format": "{}",
+      "return-type": "json",
+      "interval": 5,
+      "exec": "$HOME/.config/waybar/scripts/network.sh",
+      "tooltip": true
   },
   "temperature": {
       "critical-threshold": 70,
