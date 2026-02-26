@@ -64,6 +64,7 @@ window#waybar {
 }
 
 #clock,
+#custom-clock,
 #battery,
 #cpu,
 #memory,
@@ -115,6 +116,10 @@ window#waybar {
 
 #clock {
   color: @pink;
+}
+
+#custom-clock {
+  color: @cyan;
 }
 
 #cpu {

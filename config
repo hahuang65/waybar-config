@@ -1,7 +1,7 @@
 {
   "modules-left": ["sway/workspaces", "sway/mode"],
   // "modules-left": ["wlr/workspaces"], // For hyprland
-  "modules-center": ["clock", "clock#calendar", "custom/weather"],
+  "modules-center": ["custom/clock", "clock#calendar", "custom/weather"],
   "modules-right": ["custom/media", "idle_inhibitor", "pulseaudio", "backlight", "custom/network", "battery"],
   // "wlr/workspaces": { // For hyprland
   "sway/workspaces": { // For sway
@@ -32,8 +32,12 @@
       "format-charging": " {capacity}%",
       "format-icons": ["", "", "", "", ""]
   },
-  "clock": {
-      "format": " {:%H:%M}",
+  "custom/clock": {
+      "format": "{}",
+      "return-type": "json",
+      "interval": 30,
+      "exec": "$HOME/.config/waybar/scripts/clock.sh",
+      "tooltip": true
   },
   "clock#calendar": {
       "format": " {:%Y/%m/%d}",
