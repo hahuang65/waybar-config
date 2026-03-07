@@ -40,7 +40,7 @@
       "tooltip": true
   },
   "clock#calendar": {
-      "format": " {:%Y/%m/%d}",
+      "format": " {:%a %Y/%m/%d}",
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
   "cpu": {
