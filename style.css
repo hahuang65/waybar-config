@@ -176,11 +176,23 @@ window#waybar {
   background: transparent;
   color: @comment;
   /* border-bottom: 3px solid transparent; */
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
-/* #workspaces button.active { For hyprland */
-#workspaces button.focused {
+#workspaces button:first-child {
+  padding-right: 14px;
+}
+
+#workspaces button#niri-workspace-scratchpads,
+#workspaces button#niri-workspace-7 {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
   background: @highlight;
   border-bottom: 2px solid @orange;
   color: @orange;

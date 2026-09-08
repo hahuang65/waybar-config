@@ -1,21 +1,19 @@
 {
-  "modules-left": ["niri/workspaces", "sway/mode"],
-  // "modules-left": ["wlr/workspaces"], // For hyprland
+  "layer": "top",
+  "modules-left": ["niri/workspaces"],
   "modules-center": ["custom/clock", "clock#calendar", "custom/weather"],
   "modules-right": ["custom/media", "idle_inhibitor", "custom/volume", "custom/microphone", "backlight", "custom/network", "battery"],
-  // "wlr/workspaces": { // For hyprland
-  "sway/workspaces": { // For sway
-      // "sort-by-number": true, // For hyprland
-      // "on-click": "activate", // For hyprland
-      "disable-scroll": true, // For sway
+  "niri/workspaces": {
       "all-outputs": true,
-      "format": "{icon} {name}",
+      "format": "{icon}",
       "format-icons": {
           "1:web": "󰈹",
           "2:chat": "",
           "3:media": "",
           "4:game": "",
           "5:code": "",
+          "scratchpads": "",
+          "7": ""
       }
   },
   "backlight": {
