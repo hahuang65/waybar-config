@@ -195,7 +195,7 @@ tooltip=$(printf "%s\n%s  %s  %s°F\nFeels like: %s°F\nHumidity: %s%%\nWind: %s
     "$location_name" "$icon" "$desc" "$temp" "$feels_like" "$humidity" "$wind_speed" "$wind_dir" "$forecast")
 
 output=$(jq -nc \
-    --arg text "$icon  ${temp}°F  $location_name" \
+    --arg text "$icon  ${temp}°F" \
     --arg tooltip "$tooltip" \
     --arg class "weather" \
     '{text: $text, tooltip: $tooltip, class: $class}')

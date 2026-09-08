@@ -45,7 +45,7 @@
   border: none;
   border-radius: 0;
   font-family: "Noto Sans", "FontAwesome";
-  font-size: 20px;
+  font-size: 18px;
   min-height: 0;
 }
 
@@ -63,8 +63,8 @@ window#waybar {
   }
 }
 
-#clock,
 #custom-clock,
+#custom-date,
 #battery,
 #cpu,
 #memory,
@@ -115,7 +115,7 @@ window#waybar {
   color: @yellow;
 }
 
-#clock {
+#custom-date {
   color: @pink;
 }
 

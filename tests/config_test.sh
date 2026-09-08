@@ -16,7 +16,9 @@ assert_config_contains() {
 }
 
 assert_config_contains '"layer": "top"'
-assert_config_contains '"modules-left": ["niri/workspaces"'
+assert_config_contains '"modules-left": []'
+assert_config_contains '"modules-center": ["niri/workspaces"]'
+assert_config_contains '"modules-right": ["custom/media", "idle_inhibitor", "custom/volume", "custom/microphone", "backlight", "custom/network", "battery", "custom/weather", "custom/date", "custom/clock"]'
 assert_config_contains '"niri/workspaces": {'
 assert_config_contains '"format": "{icon}"'
 assert_config_contains '"1:web": "󰈹"'
@@ -26,7 +28,10 @@ assert_config_contains '"4:game": ""'
 assert_config_contains '"5:code": ""'
 assert_config_contains '"scratchpads": ""'
 assert_config_contains '"7": ""'
+assert_config_contains '"custom/date": {'
+assert_config_contains '"exec": "date '\''+%a %b %-d'\''"'
 
+grep -Fq 'font-size: 18px;' "$STYLE_FILE"
 grep -Fq '#workspaces button#niri-workspace-scratchpads,' "$STYLE_FILE"
 grep -Fq '#workspaces button#niri-workspace-7' "$STYLE_FILE"
 grep -Fq 'font-size: 0;' "$STYLE_FILE"

@@ -1,8 +1,8 @@
 {
   "layer": "top",
-  "modules-left": ["niri/workspaces"],
-  "modules-center": ["custom/clock", "clock#calendar", "custom/weather"],
-  "modules-right": ["custom/media", "idle_inhibitor", "custom/volume", "custom/microphone", "backlight", "custom/network", "battery"],
+  "modules-left": [],
+  "modules-center": ["niri/workspaces"],
+  "modules-right": ["custom/media", "idle_inhibitor", "custom/volume", "custom/microphone", "backlight", "custom/network", "battery", "custom/weather", "custom/date", "custom/clock"],
   "niri/workspaces": {
       "all-outputs": true,
       "format": "{icon}",
@@ -37,9 +37,11 @@
       "exec": "$HOME/.config/waybar/scripts/clock.sh",
       "tooltip": true
   },
-  "clock#calendar": {
-      "format": " {:%a %Y/%m/%d}",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  "custom/date": {
+      "format": "{}",
+      "interval": 60,
+      "exec": "date '+%a %b %-d'",
+      "tooltip": false
   },
   "cpu": {
       "format": "{usage}% ",
