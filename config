@@ -1,5 +1,5 @@
 {
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": ["niri/workspaces", "sway/mode"],
   // "modules-left": ["wlr/workspaces"], // For hyprland
   "modules-center": ["custom/clock", "clock#calendar", "custom/weather"],
   "modules-right": ["custom/media", "idle_inhibitor", "custom/volume", "custom/microphone", "backlight", "custom/network", "battery"],
